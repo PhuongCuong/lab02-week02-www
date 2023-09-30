@@ -2,10 +2,7 @@ package fit.iuh.edu.vn.lab02week02.respositories;
 
 import fit.iuh.edu.vn.lab02week02.enums.EmployeeStatus;
 import fit.iuh.edu.vn.lab02week02.modal.Employee;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
-import jakarta.persistence.TypedQuery;
+import jakarta.persistence.*;
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggerFactory;
 
@@ -24,26 +21,30 @@ public class EmployeeRespository {
         transaction = entityManager.getTransaction();
     }
 
-    public void insertEmp(Employee employee){
+    public boolean insertEmp(Employee employee){
         try {
             transaction.begin();
             entityManager.persist(employee);
             transaction.commit();
+            return true;
         }catch (Exception ex){
             transaction.rollback();
             logger.error(ex.getMessage());
         }
+        return false;
     }
 
-    public void updateEmp(Employee employee){
+    public Boolean updateEmp(Employee employee){
         try {
             transaction.begin();
             entityManager.merge(employee);
             transaction.commit();
+            return true;
         }catch (Exception ex){
             transaction.rollback();
             logger.error(ex.getMessage());
         }
+        return false;
     }
 
     public void setStatus(Employee employee, EmployeeStatus status){
@@ -67,5 +68,14 @@ public class EmployeeRespository {
     public List<Employee> getAllEmp(){
         return entityManager.createNamedQuery("Employee-findAll",Employee.class).getResultList();
     }
+
+    public List<Employee> getAllemplbystatus() {
+        Query query = entityManager.createNamedQuery("Employee-findAllbystatus", Employee.class);
+        query.setParameter("status1", EmployeeStatus.ACCTIVE);
+        query.setParameter("status2", EmployeeStatus.DEACCTIVE);
+        List<Employee> list = query.getResultList();
+        return list;
+    }
+
 
 }

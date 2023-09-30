@@ -6,6 +6,11 @@ import java.util.List;
 
 @Entity
 @Table(name = "customers")
+@NamedQueries({
+        @NamedQuery(name = "getAll-cus",query = "select c from Customer c"),
+        @NamedQuery(name = "getAll-cus-by-id",query = "select c from Customer c where c.id = :id"),
+
+})
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

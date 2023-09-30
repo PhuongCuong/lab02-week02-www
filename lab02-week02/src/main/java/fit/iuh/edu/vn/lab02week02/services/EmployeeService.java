@@ -14,12 +14,12 @@ public class EmployeeService {
         respository = new EmployeeRespository();
     }
 
-    public void insertEmp(Employee employee){
-        respository.insertEmp(employee);
+    public boolean insertEmp(Employee employee){
+        return respository.insertEmp(employee);
     }
 
-    public void updateEmp(Employee employee){
-        respository.updateEmp(employee);
+    public boolean updateEmp(Employee employee){
+        return respository.updateEmp(employee);
     }
 
     public Optional<Employee> findEmpbyId(int id){
@@ -59,5 +59,9 @@ public class EmployeeService {
 
     public List<Employee> getAllEmp(){
         return respository.getAllEmp();
+    }
+
+    public List<Employee> getAllemplbystatus(){
+        return respository.getAllemplbystatus();
     }
 }

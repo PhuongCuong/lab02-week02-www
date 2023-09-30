@@ -10,8 +10,14 @@ import java.util.List;
 @Table(name = "products")
 @NamedQueries({
         @NamedQuery(name = "product.findAlls",query = "select p from Product p"),
-        @NamedQuery(name = "Product.findAll",query = "SELECT DISTINCT p FROM Product p JOIN FETCH p.price")
+        @NamedQuery(name = "Product.findAll",query = "SELECT DISTINCT p FROM Product p JOIN FETCH p.price"),
+        @NamedQuery(
+                name = "product.findAllbystatus",
+                query = "select p from Product p where p.status = :status1 or p.status = :status2"
+        ),
+        @NamedQuery(name = "product.findbyId",query = "select p from Product p where p.id = :id")
 })
+@Cacheable(value = false)
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -132,6 +138,9 @@ public class Product {
                 ", unit='" + unit + '\'' +
                 ", manufacturerName='" + manufacturerName + '\'' +
                 ", status=" + status +
+                ", price=" + price +
+                ", image=" + image +
+                ", orderDetail=" + orderDetail +
                 '}';
     }
 }

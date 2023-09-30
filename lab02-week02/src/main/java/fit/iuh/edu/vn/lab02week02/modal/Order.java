@@ -12,7 +12,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id" , nullable = false)
     private int id;
-    @Column(name = "order_date")
+    @Column(name = "order_date",columnDefinition = "Timestamp")
     private Timestamp orderDate;
     @ManyToOne
     @JoinColumn(name ="emp_id",referencedColumnName = "emp_id",nullable = false)

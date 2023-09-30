@@ -1,5 +1,6 @@
 package fit.iuh.edu.vn.lab02week02.modal;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.util.Objects;
@@ -15,7 +16,7 @@ public class OrderDetail {
     @Id
     @ManyToOne
     @JoinColumn(name = "product_id",referencedColumnName = "product_id",nullable = false)
-
+    @JsonBackReference
     private Product productId;
 
 

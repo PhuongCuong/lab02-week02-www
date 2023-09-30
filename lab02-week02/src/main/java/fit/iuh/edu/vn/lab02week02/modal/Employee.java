@@ -10,7 +10,8 @@ import java.util.List;
 @Table(name = "employees")
 @NamedQueries({
         @NamedQuery(name = "Employee-findAll",query = "select e from Employee e"),
-        @NamedQuery(name = "Employee-findbyId",query = "select e from Employee e where e.id = :id")
+        @NamedQuery(name = "Employee-findbyId",query = "select e from Employee e where e.id = :id"),
+        @NamedQuery(name = "Employee-findAllbystatus", query = "select e from Employee e where e.status = :status1 or e.status = :status2")
 })
 public class Employee {
     @Id
@@ -19,7 +20,7 @@ public class Employee {
     private int id;
     @Column(name = "full_name",length = 150)
     private String fullName;
-    @Column(name = "dob")
+    @Column(name = "dob",columnDefinition = "Timestamp")
     private Timestamp dob;
     @Column(name = "email",length = 200)
     private String email;

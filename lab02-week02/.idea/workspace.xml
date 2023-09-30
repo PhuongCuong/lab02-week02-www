@@ -10,41 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2fad0a1-cc9d-48e5-bc9e-9049738ecbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/HelloResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/config/Configcors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/config/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/config/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/converters/EmployeeStatusConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/converters/ProductStatusConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/enums/EmployeeStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/enums/ProductStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/ProductImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/modal/ProductPrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/resources/EmployeeResourc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/resources/ProductResourc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/respositories/EmployeeRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/respositories/ProductResopsitory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/services/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Cart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Cart.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Order.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/services/employeeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/services/employeeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/services/productService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/services/productService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -96,11 +75,12 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_directory_selection&quot;: &quot;D:/Project/lab02-week02/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/lab02-week02-be-fe/lab02-week02&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -131,6 +111,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 10.1" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="lab02-week02:war exploded">
           <settings>
@@ -246,10 +227,35 @@
       <workItem from="1695287685391" duration="2653000" />
       <workItem from="1695343305499" duration="2599000" />
       <workItem from="1695350927346" duration="4794000" />
+      <workItem from="1695825145620" duration="1363000" />
+      <workItem from="1695864786560" duration="13574000" />
+      <workItem from="1695950935028" duration="14645000" />
+      <workItem from="1696002175115" duration="10677000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/services/ProductService.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="fit.iuh.edu.vn.lab02week02.modal.Product" memberName="price" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="dsproduct.get(0).price" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

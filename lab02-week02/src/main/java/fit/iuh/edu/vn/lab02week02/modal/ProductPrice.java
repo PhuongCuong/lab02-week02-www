@@ -8,9 +8,10 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "productprices")
+@Cacheable(value = false)
 public class ProductPrice {
     @Id
-    @Column(name = "price_date_time",nullable = false)
+    @Column(name = "price_date_time",nullable = false,columnDefinition = "Timestamp")
     private Timestamp priceDateTime;
     @Column(name = "price")
     private double price;
