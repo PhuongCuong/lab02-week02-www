@@ -10,19 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2fad0a1-cc9d-48e5-bc9e-9049738ecbe9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FE-week02/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Cart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Cart.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Home.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/Order.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FE-week02/src/services/employeeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/services/employeeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FE-week02/src/container/product/CreateProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/container/product/CreateProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FE-week02/src/services/productService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FE-week02/src/services/productService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,6 +219,8 @@
       <workItem from="1695864786560" duration="13574000" />
       <workItem from="1695950935028" duration="14645000" />
       <workItem from="1696002175115" duration="10677000" />
+      <workItem from="1696164537614" duration="3789000" />
+      <workItem from="1696468209934" duration="7268000" />
     </task>
     <servers />
   </component>
@@ -238,15 +228,6 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fit/iuh/edu/vn/lab02week02/services/ProductService.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="fit.iuh.edu.vn.lab02week02.modal.Product" memberName="price" />

@@ -54,6 +54,14 @@ public class Product {
         this.orderDetail = orderDetail;
     }
 
+    public Product(String name, String description, String unit, String manufacturerName, ProductStatus status) {
+        this.name = name;
+        this.description = description;
+        this.unit = unit;
+        this.manufacturerName = manufacturerName;
+        this.status = status;
+    }
+
     public Product() {
     }
 

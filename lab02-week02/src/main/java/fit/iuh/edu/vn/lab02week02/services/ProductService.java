@@ -4,6 +4,7 @@ import fit.iuh.edu.vn.lab02week02.enums.EmployeeStatus;
 import fit.iuh.edu.vn.lab02week02.enums.ProductStatus;
 import fit.iuh.edu.vn.lab02week02.modal.Employee;
 import fit.iuh.edu.vn.lab02week02.modal.Product;
+import fit.iuh.edu.vn.lab02week02.modal.ProductImage;
 import fit.iuh.edu.vn.lab02week02.modal.ProductPrice;
 import fit.iuh.edu.vn.lab02week02.respositories.ProductResopsitory;
 
@@ -78,5 +79,21 @@ public class ProductService {
             return true;
         }
         return false;
+    }
+
+
+    public boolean insertProduct(Product product){
+        return productResopsitory.insertProduct(product);
+    }
+
+    public boolean insertProductPrice(Product product, ProductPrice price, ProductImage productImage){
+        if(productResopsitory.insertProduct(product) && productResopsitory.insertProductPrice(price) && productResopsitory.insertProductImg(productImage)){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean insertProductImg(ProductImage productImage){
+        return productResopsitory.insertProductImg(productImage);
     }
 }

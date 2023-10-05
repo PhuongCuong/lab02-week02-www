@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaTrashAlt, FaPenSquare } from "react-icons/fa";
 import ModalProduct from "./ModalProduct";
 import "./TableProduct.scss";
+import _ from "lodash";
 
 const TableProduct = (props) => {
   const [getAllemp, setAllempl] = useState([]);
@@ -56,7 +57,11 @@ const TableProduct = (props) => {
                 <th scope="row">{index++}</th>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
-                <td>{item.price ? item.price[0].price : ""}</td>
+                <td>
+                  {item && item.price && !_.isEmpty(item.price)
+                    ? item.price[0].price
+                    : ""}
+                </td>
                 <td
                   className="items-img"
                   style={{

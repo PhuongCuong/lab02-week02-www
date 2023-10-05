@@ -1,10 +1,67 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../login/Nav";
 import "./CreateProduct.scss";
-import { insertEmpl } from "../../services/productService";
+import {
+  insertEmpl,
+  insertAllProduct,
+  insertProduct,
+  insertProductPrice,
+  insertProductImg,
+} from "../../services/productService";
 import { toast } from "react-toastify";
 
 const CreateProduct = () => {
+  const [dataproduct, setdataproduct] = useState({
+    name: "",
+    description: "",
+    manufacturerName: "",
+    unit: "",
+    status: "ACCTIVE",
+  });
+
+  const [dataprice, setdataprice] = useState({
+    priceDateTime: new Date().getTime(),
+    price: "",
+    node: "",
+  });
+
+  const handleCreateProduct = async () => {
+    let data = await insertProduct(dataproduct);
+    if (data && data.data) {
+      console.log("chekc data", data.data);
+      let price = await insertProductPrice({
+        ...dataprice,
+        productid: { ...data.data },
+      });
+      let img = await insertProductImg({
+        alternative: "",
+        path: "https://www.freeiconspng.com/uploads/img-landscape-photo-photography-picture-icon-12.png",
+        product: { ...data.data },
+      });
+      if (price && price.data === "ok" && img && img.data === "ok") {
+        toast.success("create product is success!");
+      }
+    } else {
+      toast.error("create error!");
+    }
+  };
+
+  let handleOnChange = (event, id) => {
+    setdataproduct({
+      ...dataproduct,
+      [id]: event.target.value,
+    });
+  };
+
+  let handleOnChangeprice = (event, id) => {
+    setdataprice({
+      ...dataprice,
+      [id]: event.target.value,
+    });
+  };
+
+  console.log("check dataprice", dataprice);
+
   return (
     <div className="container">
       <Nav />
@@ -16,8 +73,8 @@ const CreateProduct = () => {
             <input
               type="text"
               className="form-control"
-              // value={dataform ? dataform.fullName : ""}
-              // onChange={(event) => handleOnChange(event, "fullName")}
+              value={dataproduct ? dataproduct.name : ""}
+              onChange={(event) => handleOnChange(event, "name")}
             />
           </div>
           <div className="col-12">
@@ -25,8 +82,8 @@ const CreateProduct = () => {
             <input
               type="email"
               className="form-control"
-              // value={dataform ? dataform.email : ""}
-              // onChange={(event) => handleOnChange(event, "email")}
+              value={dataproduct ? dataproduct.description : ""}
+              onChange={(event) => handleOnChange(event, "description")}
             />
           </div>
           <div className="col-12">
@@ -34,8 +91,8 @@ const CreateProduct = () => {
             <input
               type="text"
               className="form-control"
-              // value={dataform ? dataform.phone : ""}
-              // onChange={(event) => handleOnChange(event, "phone")}
+              value={dataproduct ? dataproduct.manufacturerName : ""}
+              onChange={(event) => handleOnChange(event, "manufacturerName")}
             />
           </div>
           <div className="col-12">
@@ -43,8 +100,8 @@ const CreateProduct = () => {
             <input
               type="text"
               className="form-control"
-              // value={dataform ? dataform.phone : ""}
-              // onChange={(event) => handleOnChange(event, "phone")}
+              value={dataprice ? dataprice.price : ""}
+              onChange={(event) => handleOnChangeprice(event, "price")}
             />
           </div>
           <div className="col-12">
@@ -52,8 +109,8 @@ const CreateProduct = () => {
             <input
               type="text"
               className="form-control"
-              // value={dataform ? dataform.address : ""}
-              // onChange={(event) => handleOnChange(event, "address")}
+              value={dataproduct ? dataproduct.unit : ""}
+              onChange={(event) => handleOnChange(event, "unit")}
             />
           </div>
         </div>
@@ -61,7 +118,7 @@ const CreateProduct = () => {
       <div className="form-btn">
         <button
           className="btn-save btn btn-primary"
-          // onClick={() => handleSave()}
+          onClick={() => handleCreateProduct()}
         >
           Save
         </button>

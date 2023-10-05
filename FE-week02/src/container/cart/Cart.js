@@ -8,18 +8,49 @@ const Cart = (props) => {
 
   let [arrProduct, setarrProduct] = useState([]);
 
+  const [totalprice, settotalprice] = useState(0);
+
   useEffect(() => {
     setarrProduct(location.state);
   }, []);
   console.log("check state", arrProduct);
 
+  useEffect(() => {
+    let total = 0;
+    for (let i = 0; i < arrProduct.length; i++) {
+      total += arrProduct[i].price[0].price;
+    }
+    settotalprice(total);
+  }, [arrProduct]);
+
   let handleOrder = () => {
     navigate("/form-order", { state: arrProduct });
   };
 
+  console.log("check price", totalprice);
+
   return (
     <div className="container">
-      <table className="table">
+      <div className="row d-flex justify-content-center">
+        <div className="text-title col-12 d-flex justify-content-center">
+          <span>Thông tin đặt hàng</span>
+        </div>
+        <div className="col-6">
+          <div className="col-12">
+            <label className="form-label">Khách hàng</label>
+            <select className="form-control">
+              <option>kh 1</option>
+            </select>
+          </div>
+          <div className="col-12">
+            <label className="form-label">Nhân viên</label>
+            <select className="form-control">
+              <option>kh 1</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <table className="table mt-3">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -44,6 +75,10 @@ const Cart = (props) => {
           })}
         </tbody>
       </table>
+      <div className="total-price">
+        Tổng tiền:
+        <span className="text-price">{totalprice}</span>
+      </div>
       <div className="btn-order mt-4 d-flex justify-content-end">
         <button className="btn btn-primary" onClick={() => handleOrder()}>
           Đặt hàng

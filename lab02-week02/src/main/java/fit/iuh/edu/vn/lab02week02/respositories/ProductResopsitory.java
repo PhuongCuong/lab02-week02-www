@@ -4,6 +4,7 @@ import fit.iuh.edu.vn.lab02week02.enums.EmployeeStatus;
 import fit.iuh.edu.vn.lab02week02.enums.ProductStatus;
 import fit.iuh.edu.vn.lab02week02.modal.Employee;
 import fit.iuh.edu.vn.lab02week02.modal.Product;
+import fit.iuh.edu.vn.lab02week02.modal.ProductImage;
 import fit.iuh.edu.vn.lab02week02.modal.ProductPrice;
 import jakarta.persistence.*;
 import org.apache.log4j.Logger;
@@ -78,6 +79,19 @@ public class ProductResopsitory {
         try {
             transaction.begin();
             entityManager.persist(price);
+            transaction.commit();
+            return true;
+        }catch (Exception ex){
+            transaction.rollback();
+            logger.error(ex.getMessage());
+        }
+        return false;
+    }
+
+    public boolean insertProductImg(ProductImage productImage){
+        try {
+            transaction.begin();
+            entityManager.persist(productImage);
             transaction.commit();
             return true;
         }catch (Exception ex){

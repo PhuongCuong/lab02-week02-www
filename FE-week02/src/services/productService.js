@@ -20,10 +20,30 @@ const insertProductPrice = (price) => {
   return axios.post("/api/products/create-productprice", price);
 };
 
+const insertAllProduct = (product, price, productImg) => {
+  return axios.post(
+    "/api/products/insert-product-price",
+    product,
+    price,
+    productImg
+  );
+};
+
+const insertProduct = (product) => {
+  return axios.post("/api/products/insert-product", product);
+};
+
+const insertProductImg = (product) => {
+  return axios.post("/api/products/insert-product-img", product);
+};
+
 export {
   getAllProduct,
   getAllProductbystatus,
   deleteProduct,
   updateProduct,
   insertProductPrice,
+  insertAllProduct,
+  insertProduct,
+  insertProductImg,
 };

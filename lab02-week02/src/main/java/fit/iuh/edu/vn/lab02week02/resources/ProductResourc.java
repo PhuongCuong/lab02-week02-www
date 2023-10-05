@@ -2,6 +2,7 @@ package fit.iuh.edu.vn.lab02week02.resources;
 
 import fit.iuh.edu.vn.lab02week02.modal.Employee;
 import fit.iuh.edu.vn.lab02week02.modal.Product;
+import fit.iuh.edu.vn.lab02week02.modal.ProductImage;
 import fit.iuh.edu.vn.lab02week02.modal.ProductPrice;
 import fit.iuh.edu.vn.lab02week02.services.ProductService;
 import jakarta.ws.rs.*;
@@ -69,6 +70,36 @@ public class ProductResourc {
         }
         return Response.status(Response.Status.BAD_REQUEST).build();
     }
+
+    @POST
+    @Path("/insert-product")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response insertProduct(Product product){
+        if(productService.insertProduct(product) == true){
+            return Response.ok(product).build();
+        }
+        return Response.status(Response.Status.BAD_REQUEST).build();
+    }
+
+
+    @POST
+    @Path("/insert-product-img")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response insertProductImg(ProductImage productImage){
+        if(productService.insertProductImg(productImage) == true){
+            return Response.ok("ok").build();
+        }
+        return Response.status(Response.Status.BAD_REQUEST).build();
+    }
+
+//    @POST
+//    @Path("/insert-product-price")
+//    public Response insertProductPrice(Product product, ProductPrice price, ProductImage productImage){
+//        if(productService.insertProductPrice(product,price,productImage)){
+//            return Response.ok("ok").build();
+//        }
+//        return Response.status(Response.Status.BAD_REQUEST).build();
+//    }
 
 //    @POST
 //    @Path("/update-product-price")
